@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetRo</title>
+    <!-- ПОДКЛЮЧИМ ШРИФТ КОГДА СКАЧАЕМ -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/skg7ucq.css">
+    <link href="http://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--В хедере собрана шапка сайта. Хэдер это некий с
+        еманттический тег созданый для робота поисковика-->
+    <header class="header">
+        <div class="container">
+            <!--В контейнер мы поместим отцентрированный флексбокс, контэйнер не может 
+                быть родителем для хедера и всех блоков, нужно написать что то внутренне 
+                что бы он был самодостаточным это будет header__inner-->
+            <div class="header__inner">
+                <!-- БЭМ - Блок Элемент Модификатор  inner - слово обозначающее внутреннюю обертку-->
+                <div class="header__logo">
+                    <!--Logo-->
+                    <a href="#">
+                        <!--# - означает что ссылка ведет сама на себя, временное решение, 
+                            далее будет установлена реальная ссылка со стороны бэкэнда -->
+                        <span>JET</span>RO
+                        <!--Почему спан потому что спан это строчный тег, и на строке у нас ещё будет nav-->
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <!--Nav - семантический тег-->
+                    <ul>
+                        <!--ul>li*6>a[href=#]-->
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <!--Добавили класс для выпадающего меню и создали 
+                            список для выпадающего меню ul>li*5>a[href=#]-->
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- <section class="slider">
+        <div class="container"> -->
+    <!-- <div class="poloska_left"></div>
+            <div class="poloska_right"></div> -->
+    <!-- <div class="slider__inner">
+
+                <div class="slider-for">
+                    <img class="big__img" src="images/slider/img-1.jpg" alt="">
+                    <img class="big__img" src="images/slider/img-2.jpg" alt="">
+                    <img class="big__img" src="images/slider/img-3.jpg" alt="">
+                    <img class="big__img" src="images/slider/img-4.jpg" alt="">
+                    <img class="big__img" src="images/slider/img-5.jpg" alt="">
+                    <img class="big__img" src="images/slider/img-6.jpg" alt="">
+                </div>
+
+                <div class="slider-nav">
+                    <img class="min__img" src="images/slider/img-1.jpg" alt="">
+                    <img class="min__img" src="images/slider/img-2.jpg" alt="">
+                    <img class="min__img" src="images/slider/img-3.jpg" alt="">
+                    <img class="min__img" src="images/slider/img-4.jpg" alt="">
+                    <img class="min__img" src="images/slider/img-5.jpg" alt="">
+                    <img class="min__img" src="images/slider/img-6.jpg" alt="">
+                 </div>
+
+            </div>
+        </div>
+    </section> -->
+
+    <section class="slider">
+        <!-- <div class="poloska_left"></div> -->
+        <div class="container">
+
+            <div class="slider__inner">
+
+                <div class="slider-for">
+
+                    <div class="slider__item1">
+                        <div class="slider__inem-container">
+                            <div class="slider__item-title">
+                                <span>SLIDE ONE</span>
+
+                                <p>Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                                    adolescens vim te, per at tritani aperiri. Adhuc invenire convenire his ea. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item2">
+                        <div class="slider__inem-container">
+                            <div class="slider__item-title">
+                                <span>SLIDE TWO</span>
+
+                                <p>Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                                    adolescens vim te, per at tritani aperiri. Adhuc invenire convenire his ea. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item3">
+                        <div class="slider__inem-container">
+                            <div class="slider__item-title">
+                                <span>SLIDE THREE</span>
+
+                                <p>Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                                    adolescens vim te, per at tritani aperiri. Adhuc invenire convenire his ea. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item4">
+                        <div class="slider__inem-container">
+                            <div class="slider__item-title">
+                                <span>SLIDE FOUR</span>
+
+                                <p>Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                                    adolescens vim te, per at tritani aperiri. Adhuc invenire convenire his ea. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item5">
+                        <div class="slider__inem-container">
+                            <div class="slider__item-title">
+                                <span>SLIDE FIVE</span>
+
+                                <p>Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                                    adolescens vim te, per at tritani aperiri. Adhuc invenire convenire his ea. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item6">
+                        <div class="slider__inem-container">
+                            <div class="slider__item-title">
+                                <span>SLIDE SIX</span>
+
+                                <p>Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas
+                                    adolescens vim te, per at tritani aperiri. Adhuc invenire convenire his ea. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-nav">
+                    <div class="slider__item21">
+                        <div class="slider__item-title2">
+                            1
+                        </div>
+                    </div>
+                    <div class="slider__item22">
+                        <div class="slider__item-title2">
+                            2
+                        </div>
+                    </div>
+                    <div class="slider__item23">
+                        <div class="slider__item-title2">
+                            3
+                        </div>
+                    </div>
+                    <div class="slider__item24">
+                        <div class="slider__item-title2">
+                            4
+                        </div>
+                    </div>
+                    <div class="slider__item25">
+                        <div class="slider__item-title2">
+                            5
+                        </div>
+                    </div>
+                    <div class="slider__item26">
+                        <div class="slider__item-title2">
+                            6
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="poloska_right"></div>
+    </section>
+
+
+    <section class="items">
+        <div class="container">
+            <div class="items__inner">
+
+                <div class="item">
+                    <div class="item__title">
+                        <div class="item__icons">
+                            <img src="images/item__icons/icon-1.svg" alt="">
+                        </div>
+                        Check out my latest
+                        portfolio items
+                    </div>
+                    <div class="item__text">
+                        Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam
+                        ullamcorper dui sed magna posue re ut elementum enim rutrum. Nam mi erat, porta id ultrices nec,
+                        pellentesque vel nunc. Cras varius fermentum iaculis. Aenean sodales nibh non lectus tempor a
+                        interdum justo ultricies.
+                    </div>
+                    <a href="#" class="item__link">More</a>
+                </div>
+
+                <div class="item">
+                    <div class="item__title">
+                        <div class="item__icons">
+                            <img src="images/item__icons/icon-2.svg" alt="">
+                        </div>
+                        Offer Top Notch Quality
+                        Work & Services
+                    </div>
+                    <div class="item__text">
+                        Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam
+                        ullamcorper dui sed magna posue re ut elementum enim rutrum. Nam mi erat, porta id ultrices nec,
+                        pellentesque vel nunc. Cras varius fermentum iaculis. Aenean sodales nibh non lectus tempor a
+                        interdum justo ultricies.
+                    </div>
+                    <a href="#" class="item__link">More</a>
+                </div>
+
+                <div class="item">
+                    <div class="item__title">
+                        <div class="item__icons">
+                            <img src="images/item__icons/icon-3.svg" alt="">
+                        </div>
+                        Follow Me on Twitter,
+                        Facebook & Pinterest
+                    </div>
+                    <div class="item__text">
+                        Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus. Aliquam
+                        ullamcorper dui sed magna posue re ut elementum enim rutrum. Nam mi erat, porta id ultrices nec,
+                        pellentesque vel nunc. Cras varius fermentum iaculis. Aenean sodales nibh non lectus tempor a
+                        interdum justo ultricies.
+                    </div>
+                    <a href="#" class="item__link">More</a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="recent-works">
+        <div class="container">
+            <div class="recent__inner">
+
+                <div class="recent__title">
+                    recent works
+                    <img src="./images/item__icons/uzor-1.jpg" alt="" class="uzor">
+                </div>
+
+                <div class="recent__img-box">
+
+                    <div class="recent__img">
+                        <img src="./images/item__icons/recent-1.jpg" alt="">
+                        <div class="recent__img-title">
+                            Character Design
+                            <span>June 15, 2022</span>
+                        </div>
+
+                    </div>
+
+                    <div class="recent__img">
+                        <img src="./images/item__icons/recent-2.jpg" alt="">
+                        <div class="recent__img-title">
+                            Brochure Design
+                            <span>June 15, 2022</span>
+                        </div>
+                    </div>
+
+                    <div class="recent__img">
+                        <img src="./images/item__icons/recent-3.jpg" alt="">
+                        <div class="recent__img-title">
+                            Social Media Buttons
+                            <span>June 15, 2022</span>
+                        </div>
+                    </div>
+
+                    <div class="recent__img">
+                        <img src="./images/item__icons/recent-4.jpg" alt="">
+                        <div class="recent__img-title">
+                            10 Amazing Websites
+                            <span>June 15, 2022</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="block-left"></div>
+                <div class="block-right"></div>
+                <div class="footer__item">
+                    <div class="footer__items-title">
+                        About Jetro
+                    </div>
+                    <div class="footer__text">
+                        Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas adolescens vim te,
+                        per at tritani aperiri. Adhuc invenire convenire his ea. Id mei vitae denique, in eam commodo
+                        veritus disputando.
+                        <div class="footer__text2">
+                            Pro et erant delicata, eu vim essent imperdiet accommodare, dictas deseruisse ius an. Solet
+                            everti definitionem id ius, sonet oporteat cu vim.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__item footer__list">
+                    <div class="footer__items-title">
+                        Twitter Widget
+                    </div>
+
+                    <ul class="footer__list-items">
+                        <li><span>@pixelmater</span> What an awesome design with great functionality :)</li>
+                        <li><span>about 1 hour ago</span></li>
+                        <li><span>@pixelmater</span> What an awesome design with great functionality :)</li>
+                        <li><span>about 2 hour ago</span></li>
+                        <div>Follow <span>@bestpsdfreebies</span></div>
+                    </ul>
+                </div>
+
+                <div class="footer__item footer__item-contact">
+                    <div class="footer__items-title">
+                        contact us
+                    </div>
+                    <div class="footer__adress">
+                        Lorem ipsum dolor sit amet, malorum recteque reprehendunt ea vel. Urbanitas adolescens vim te,
+                        per at tritani aperiri.
+
+
+                    </div>
+                    <div class="footer__phone">
+                        <div><a href="e-mail:information@jetro.com">information@jetro.com</a></div>
+
+                        <div><a href="tel:1.222.333.4444">1.222.333.4444</a></div>
+
+                    </div>
+                    <ul class="footer__social">
+                        <!--  li*6>a[href=#]>img[src=images/social/item-$.png] -->
+                        <li><a href="#"><img src="./images/social/item-1.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/social/item-2.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/social/item-3.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/social/item-4.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/social/item-5.png" alt=""></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
+
+<!--1:55:00-->

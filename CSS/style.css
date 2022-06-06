@@ -1,0 +1,606 @@
+/* ************************************************************************* */
+/*                                                                           */
+/* ************************************************************************* */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+/* ************************************************************************* */
+/*             0.     Стили созданные в начале проекта (reset css)           */
+/* ************************************************************************* */
+
+body {
+    background-image: url(../images/uzor200x200.png);
+    background-repeat: repeat;
+}
+
+a {
+    color: #000000;
+    display: inline-block;
+    text-decoration: none;
+    /* убираем подчеркивание из ссылок */
+}
+
+ul {
+    list-style: none;
+    /* Убираем точки перед элементами списка */
+    /* margin: 15px 0 0 0;          Убираем отступы у списка сверху */
+    padding: 0;
+    /* Убираем отступы у списка по бокам */
+}
+
+li {
+    display: inline-block;
+    /* Делаем элементы строчными, можно написать display-flex */
+}
+
+/* ************************************************************************* */
+/*             0.     Стили созданные в начале проекта (reset css)           */
+/* ************************************************************************* */
+
+
+/* ************************************************************************* */
+/*                                  КОНТЕЙНЕР                                */
+/* ************************************************************************* */
+
+.container {
+    max-width: 960px;
+    /*2.    max-width а не просто width т.к. это даёт адаптивности нашему макету, 
+    4.  Увеличим на 30 px с 1000 до 1030px что бы нивелировать паддинги*/
+    margin: 0 auto;
+    /*      margin: 0 auto - центрирует наш контейнер */
+    padding: 0px 10px;
+    /*3.    прописывается для того что бы контент не прилипал к краям девайса при уменьшении экрана*/
+}
+
+/* ************************************************************************* */
+/* ************************************************************************* */
+
+/* ************************************************************************* */
+/*                      ПРОБУЕМ ДЕЛАТЬ ПОЛОСКИ ПО БОКАМ                      */
+/* ************************************************************************* */
+/* .poloska_left{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(232, 96, 60, 0.502);
+    position: absolute;
+    left: 2px;
+    top: 108px;
+    width: 230px;
+    height: 62px;
+    z-index: 99;    
+}
+
+
+
+.poloska_right{
+    background-color: rgba(232, 96, 60, 0.502);
+    position: absolute;
+    left: 1192px;
+    top: 108px;
+    width: 220px;
+    height: 62px;    
+}
+
+.block-left{
+    background-color: rgba(232, 102, 60, 0.502);
+    position: absolute;
+    left: -67px;
+    top: 1399px;
+    width: 299px;
+    height: 263px; 
+}
+.block-right{
+    background-color: rgba(232, 102, 60, 0.502);
+    position: absolute;
+    left: 1191px;
+    top: 1399px;
+    width: 299px;
+    height: 263px;
+    z-index: 7;    
+} */
+
+/* ************************************************************************* */
+/*                       ПРОБУЕМ ДЕЛАТЬ ПОЛОСКИ ПО БОКАМ                     */
+/* ************************************************************************* */
+
+
+.header__inner {
+    display: flex;
+    /*5.    подключаем дисплей флекс  */
+    justify-content: space-between;
+    /* раскидываем по краям лого и нав */
+    align-items: center;
+    height: 78px;
+    margin-top: 13px;
+}
+
+.header__logo a {
+    margin-bottom: 7px;
+}
+
+.header__logo a {
+    /*  !!! НУЖНО ДОБАВИТЬ ШРИФТ LATO Black, Regular;  Arial Bold, Arial regular;  !!! */
+    color: #f3af9d;
+    font-size: 50px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.header__logo a span {
+    color: #e8603c;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+}
+
+/* ***************************************************************************/
+/* 1.   хедеру мы можем залать только фоновый цвет                           */
+/*      померием размер контейнера это 1000px стили контейнера               */
+/*      задаем выше стилей хедера т.к.контейнер                              */
+/*      будем использовать в других местах                                   */
+/* ***************************************************************************/
+
+/* ************************************************************************* */
+/*                                  Работа с меню                            */
+/* ************************************************************************* */
+
+.header__menu li+li {
+    margin-left: 27px;
+}
+
+.header__menu a {
+    font-family: 'Bebas Neue', cursive;
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #d9d9d9;
+}
+
+.header__menu a:hover {
+    color: #e8663c;
+}
+
+/* ************************************************************************* */
+/*                                  Работа с меню                            */
+/* ************************************************************************* */
+
+
+/* ************************************************************************* */
+/*                            Работа со слайдером                            */
+/* ************************************************************************* */
+
+/* .slick-track{
+    display: flex;
+
+} */
+/* *************************************
+.slick-current div img{
+    height: 382px;
+    width: 100%;
+}
+.slick-center div img{
+    height: 120px;
+}
+.big__img div{
+    width: 920px;
+}
+.min__img{
+    height: 120px;
+    max-width: 100%
+}
+
+********************************** */
+
+
+
+
+/* .slick-slide, .slick-active div .min__img{
+    max-width: 160px;
+} */
+/* .slick-slide, .slick-cloned:first-child{
+    max-width:160px;
+} */
+/* .slick-slide.slick-active{
+    max-width: 160px;
+} */
+
+/* .slick-slide.slick-current.slick-active.slick-center div::before{ 
+    width: 160px;
+} */
+
+/* .slick-current div img{
+    width: 900px;
+} */
+
+/* ********************************* */
+/* .slider-for {
+    display: flex;
+
+    justify-content: center;
+    max-height: 400px;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    max-height: 140px;
+}
+
+img {
+    display: flex;
+    align-content: stretch;
+} 
+
+
+.slick-next,
+.slick-arrow::before {
+    color: #000;
+}
+.slick-arrow:before{
+    display: none;
+}
+.slick-prev{
+    top: -210px;
+    left: 25px;
+}
+.slick-next{
+    top: -210px;
+    left: 880px;
+}
+.slick-track {
+    padding-top: 17px;
+}
+
+
+
+
+
+/* .slider__item-container{
+    background-color: orange;
+    max-height: 120px;
+    max-width: 415px;
+}
+
+********************************* */
+
+/* .slide_conteiner{
+    display: inline-block;
+} */
+
+/* ************************************************************************* */
+/*                            Работа со слайдером                            */
+/* ************************************************************************* */
+
+/* ************************************************************************* */
+/*                            Работа со слайдером    2                       */
+/* ************************************************************************* */
+
+.slider{
+    padding: 20px 0px 10px;
+
+} 
+
+.slider__item1{
+    background-image: url(../images/slider/img-1.jpg);
+}
+.slider__item2{
+    background-image: url(../images/slider/img-2.jpg);
+}
+.slider__item3{
+    background-image: url(../images/slider/img-3.jpg);
+}
+.slider__item4{
+    background-image: url(../images/slider/img-4.jpg);
+}
+.slider__item5{
+    background-image: url(../images/slider/img-5.jpg);
+}
+.slider__item6{
+    background-image: url(../images/slider/img-6.jpg);
+}
+.slider__item1, .slider__item2, .slider__item3, .slider__item4, .slider__item5, .slider__item6{
+    min-height: 400px;
+    background-position: top center; /* прописываем для использования на мобильной версии */
+    background-size: cover;
+    background-repeat: no-repeat;  /* Для того что бы картинка не дублировалась в определенных случаях */
+    /* Последние три свойства нужны для мобильной версии */
+}
+
+
+
+.slider__item-title{
+    font-size: 25px;
+    font-family: 'Bebas Neue', serif;
+    max-width: 415px;
+    min-height: 125px;
+    margin-top: 150px;
+    background-color: rgba(236 , 132, 98, .8);
+    margin-top: 245px;
+    margin-left: 35px;
+    color: #fff;
+    padding-top: 24px;
+    padding-left: 20px;
+}
+.slider__item-title p{
+    color: #fff;
+    font-family: 'Helvetica', serif;
+    font-size: 12px;
+    line-height: 12px; 
+}
+.slider__item21{
+    background-image: url(../images/slider/img-1.jpg);
+    min-height: 120px;
+    max-width: 140px;
+    background-position: top center; /* прописываем для использования на мобильной версии */
+    background-size: cover;
+    background-repeat: no-repeat;  /* Для того что бы картинка не дублировалась в определенных случаях */
+}
+.slider__item22{
+    background-image: url(../images/slider/img-2.jpg);
+    min-height: 120px;
+    max-width: 140px;
+    background-position: top center; /* прописываем для использования на мобильной версии */
+    background-size: cover;
+    background-repeat: no-repeat;  /* Для того что бы картинка не дублировалась в определенных случаях */
+}
+.slider__item23{
+    background-image: url(../images/slider/img-3.jpg);
+    min-height: 120px;
+    max-width: 140px;
+    background-position: top center; /* прописываем для использования на мобильной версии */
+    background-size: cover;
+    background-repeat: no-repeat;  /* Для того что бы картинка не дублировалась в определенных случаях */
+}
+.slider__item24{
+    background-image: url(../images/slider/img-4.jpg);
+    min-height: 120px;
+    max-width: 140px;
+    background-position: top center; /* прописываем для использования на мобильной версии */
+    background-size: cover;
+    background-repeat: no-repeat;  /* Для того что бы картинка не дублировалась в определенных случаях */
+}
+.slider__item25{
+    background-image: url(../images/slider/img-5.jpg);
+    min-height: 120px;
+    max-width: 140px;
+    background-position: top center; /* прописываем для использования на мобильной версии */
+    background-size: cover;
+    background-repeat: no-repeat;  /* Для того что бы картинка не дублировалась в определенных случаях */
+}
+.slider__item26{
+    background-image: url(../images/slider/img-6.jpg);
+    min-height: 120px;
+    max-width: 140px;
+    background-position: top center; /* прописываем для использования на мобильной версии */
+    background-size: cover;
+    background-repeat: no-repeat;  /* Для того что бы картинка не дублировалась в определенных случаях */
+}
+.slick-slide{
+    width: 160px;
+ }
+
+ .slider-nav.slick-initialized.slick-slider{
+     margin-top: 25px;
+ }
+
+ .slick-arrow.slick-next::before{
+    display: none;
+ }
+
+ .slick-arrow.slick-prev::before{
+    display: none;
+ }
+
+ .slick-next,
+.slick-arrow::before {
+    color: #000;
+}
+.slick-arrow:before{
+    display: none;
+}
+.slick-prev{
+    top: -250px;
+    left: 25px;
+}
+.slick-next{
+    top: -250px;
+    left: 880px;
+}
+.slick-track {
+    padding-top: 17px;
+}
+
+
+/* ************************************************************************* */
+/*                            Работа со слайдером  2                         */
+/* ************************************************************************* */
+
+
+/* СО СЛАЙДЕРОМ ЗАКОНЧИМ ПОЗЖЕ, А СЕЙЧАС ПЕРЕХОДИМ К СЛЕДУЮЩЕМУ БЛОКУ */
+
+
+/* ************************************************************************* */
+/*                                   items                                   */
+/* ************************************************************************* */
+
+.items__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 43px;
+}
+
+.item {
+    width: 280px;
+}
+
+.item__title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+    font-weight: 400;
+    /* font-family: myriad-pro-condensed, sans-serif; */
+    text-transform: uppercase;
+    line-height: 24px;
+    color: #e8663c;
+    position: relative;
+    padding-left: 70px;
+}
+
+.item__text {
+    font-family: 'Helvetica 25 UltraLight', sans-serif;
+    font-weight: 400;
+    color: #414141;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 38px;
+}
+
+.item__icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.item__link {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    border: 1px solid #e8603c;
+    background-color: #e8663c;
+    padding: 3px 12px 0px 12px;
+    margin-top: 20px;
+}
+/* ************************************************************************* */
+/*                                   items                                   */
+/* ************************************************************************* */
+
+
+/* ************************************************************************* */
+/*                            .recent-works                                  */
+/* ************************************************************************* */
+
+.recent__title {
+    display: flex;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    color: #e8603c;
+    margin-top: 45px;
+    justify-content: space-around;
+}
+
+.recent__title img {
+    display: inline-block;
+    padding-left: 18px;
+}
+
+.recent__img-box {
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3px;
+    padding-bottom: 47px;
+}
+
+.recent__img-title {
+
+    border: 1px solid #dbdbdb;
+    border-top: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    font-weight: 400;
+    color: #b9b9b9;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.recent__img-title span {
+    display: block;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 12px;
+    font-weight: 400;
+    color: #e8663c;
+    padding-top: 2px;
+    padding-bottom: 10px;
+}
+
+/* ************************************************************************* */
+/*                               ПРЕФУТЕР                                    */
+/* ************************************************************************* */
+
+
+/* ************************************************************************* */
+/*                                  ФУТЕР                                    */
+/* ************************************************************************* */
+
+.footer__inner {
+    background-color: #e8663c;
+    display: flex;
+    justify-content: center;
+    height: 263px;
+
+}
+
+.footer__items-title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    max-width: 300px;
+    margin-top: 40px;
+    margin-left: 37px;
+}
+
+.footer__social, .footer__text, .footer__list-items, .footer__adress, .footer__phone a{
+    font-family: 'Helvetica 25 UltraLight', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 11px;
+    line-height: 18px;
+
+    margin-top: 25px;
+    margin-left: 37px;
+}
+.footer__list-items span{
+    color: #f3b29d;
+    max-width: 300px;
+}
+.footer__text2{
+    padding-top: 15px;
+}
+
+.footer__text{
+    text-align: justify;
+    max-width: 300px;
+}
+
+.footer__item{
+    max-width: 300px;
+}
+
+.footer__phone a{
+    margin-top: -3px;
+}
+.footer__adress{
+    padding-bottom: 5px;
+}
+.footer__list-items li{
+    padding-bottom: 7px;
+}
+
+/* ************************************************************************* */
+/*                                  ФУТЕР                                    */
+/* ************************************************************************* */
